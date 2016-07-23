@@ -6,8 +6,9 @@
 
 SERVICE_NAME="MyService"
 PATH_TO_JAR="/usr/local/MyProject/MyJar.jar"
-PATH_TO_JAVA="java"
+PROGRAM_ARGS=""
 
+PATH_TO_JAVA="java"
 STD_OUT="/dev/null"
 STD_ERR="/dev/null"
 
@@ -20,7 +21,7 @@ StartService()
 		if [ -f $PATH_TO_PID ]; then
 			echo "$SERVICE_NAME is already running ..."
 		else
-			nohup $PATH_TO_JAVA -jar $PATH_TO_JAR 2>> $STD_ERR 1>> $STD_OUT & echo $! > $PATH_TO_PID
+			nohup $PATH_TO_JAVA -jar $PATH_TO_JAR $PROGRAM_ARGS 2>> $STD_ERR 1>> $STD_OUT & echo $! > $PATH_TO_PID
 			echo "$SERVICE_NAME started ..."
 		fi
 	else
