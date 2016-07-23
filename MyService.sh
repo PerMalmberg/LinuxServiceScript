@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# Copyright (c) 2016 Per Malmberg
+# Licensed under the MIT license, see LICENSE file.
+
+
 SERVICE_NAME="MyService"
 PATH_TO_JAR="/usr/local/MyProject/MyJar.jar"
 PATH_TO_JAVA="java"
